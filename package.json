@@ -1,0 +1,69 @@
+{
+  "name": "react-app-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:3001",
+  "module": "src/index.js",
+  "homepage": ".",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.0",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.1",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "http-proxy-middleware": "^1.0.6",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "4.2.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "prettier-format-js": "prettier --config .prettierrc 'src/**/*.js' --write",
+    "prettier-format-ts": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "./node_modules/.bin/eslint",
+    "build": "react-scripts build",
+    "dev": "concurrently \"npm run server\" \"react-scripts start\"",
+    "server": "node src/server/index.js",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "prettier": "2.2.0"
+  }
+}

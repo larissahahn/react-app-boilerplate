@@ -1,0 +1,33 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8
+    },
+    "ecmaFeatures": {
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "modules": true,
+      "spread": true,
+      "globalReturn": true,
+      "jsx": true
+    },
+    "rules": {
+        "comma-dangle": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/no-array-index-key": "off",
+        "no-unused-vars": "off",
+        "prefer-arrow-callback": "off",
+        "import/newline-after-import": "off",
+        "func-names": "off",
+        "no-console": "off",
+        "react/destructuring-assignment": "off",
+        "no-plusplus": "off",
+        "no-param-reassign": "off"
+    }
+}
