@@ -1,5 +1,6 @@
 import HomeComponent from './client/components/home';
 import BooksListComponent from './client/components/books/books-list';
+import SettingsComponent from './client/components/settings';
 
 export const routes = [
   {
@@ -10,6 +11,10 @@ export const routes = [
   {
     path: '/books',
     component: BooksListComponent
+  },
+  {
+    path: '/settings',
+    component: SettingsComponent
   }
   // {
   //   path: "/testroute",

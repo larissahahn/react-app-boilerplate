@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  const healthcheck = {
+  const apiHealthCheck = {
     uptime: process.uptime(),
     message: 'OK',
     timestamp: Date.now()
   };
 
   try {
-    res.send(healthcheck);
+    res.status(200).send(apiHealthCheck);
   } catch (err) {
-    healthcheck.message = err;
+    apiHealthCheck.message = err;
     res.status(503).send();
   }
 });

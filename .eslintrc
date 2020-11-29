@@ -28,6 +28,9 @@
         "no-console": "off",
         "react/destructuring-assignment": "off",
         "no-plusplus": "off",
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "react/no-did-update-set-state": "off",
+        "react/forbid-prop-types": "off",
+        "react/jsx-fragments": "off"
     }
 }

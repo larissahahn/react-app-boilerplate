@@ -1,27 +1,19 @@
-// import { getBooksCount } from '../../actions/books-action';
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
+import Typography from '@material-ui/core/Typography';
+
+const StyledHome = styled.div`
+  padding-top: 1.85em;
+`;
 
 class HomeComponent extends PureComponent {
-  // constructor(props) {
-  //     super(props);
-
-  // }
-
   render() {
     return (
-      <div>
-        <h1>Main Entry into Application</h1>
-        <br />
-        <h2>Test Nav:</h2>
-        <br />
-        <ul>
-          <li>
-            <Link to="/books">Books</Link>
-          </li>
-        </ul>
-      </div>
+      <StyledHome>
+        <Typography variant="h3">Content</Typography>
+        <Typography variant="body1">&nbsp;Main entry into application.</Typography>
+      </StyledHome>
     );
   }
 }

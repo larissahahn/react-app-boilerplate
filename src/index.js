@@ -1,11 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import GlobalStyle from './globalStyles';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import store from './client/store';
 
-const AppWithProvider = <Provider store={store}><App /></Provider>;
+const AppWithProvider = (
+  <Provider store={store}>
+    <GlobalStyle />
+    <App />
+  </Provider>
+);
 
 ReactDOM.render(
   AppWithProvider,

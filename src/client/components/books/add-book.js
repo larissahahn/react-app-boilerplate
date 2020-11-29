@@ -11,6 +11,7 @@ const StyledButton = styled(Button)`
   font-weight: 600;
   border-radius: 2em;
   margin: 5em;
+  float: right;
 `;
 
 class AddBookComponent extends PureComponent {
