@@ -8,8 +8,24 @@ router.get('/', (req, res, next) => {
   if (MOCK_DATA) {
     const mockData = {
       data: [
-        { bookId: 7, bookTitle: 'My Book Title' },
-        { bookId: 8, bookTitle: 'My Book Title' }
+        {
+          bookId: 7,
+          title: 'Romeo & Juliet',
+          author: 'William Shakespeare',
+          cover: '/images/books/2.png',
+          synopsis: '',
+          blobText: '',
+          publishedYear: ''
+        },
+        {
+          bookId: 8,
+          title: 'Where the Sidewalk Ends',
+          author: 'Shel Silverstein',
+          cover: '/images/books/1.png',
+          synopsis: '',
+          blobText: '',
+          publishedYear: ''
+        }
       ]
     };
 

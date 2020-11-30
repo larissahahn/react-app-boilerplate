@@ -15,7 +15,7 @@ import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import MessageIcon from '@material-ui/icons/Message';
 import PhonelinkSetupIcon from '@material-ui/icons/PhonelinkSetup';
 import ReactLogoComponent from './logo';
-import BooksButtonComponent from '../books/books-button';
+import BooksButtonComponent from '../books/buttons/books-count-badge';
 import { getUser } from '../../actions/user/userActions';
 
 const StyledToolbar = styled.div`

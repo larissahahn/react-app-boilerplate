@@ -6,7 +6,7 @@ import Badge from '@material-ui/core/Badge';
 import IconButton from '@material-ui/core/IconButton';
 import LocalLibrary from '@material-ui/icons/LocalLibrary';
 import { Link } from 'react-router-dom';
-import { getBooks } from '../../actions/books/booksActions';
+import { getBooks } from '../../../actions/books/booksActions';
 
 const StyledBooksBadge = styled(Badge)`
   color: #949494;

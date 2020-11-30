@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
-import AddIcon from '@material-ui/icons/Add';
-import { addBook } from '../../actions/books/booksActions';
+import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import { addBook } from '../../../actions/books/booksActions';
 
 const StyledButton = styled(Button)`
   background-color: blue;
   font-weight: 600;
   border-radius: 2em;
   margin: 5em;
-  float: right;
+  float: left;
 `;
 
 class AddBookComponent extends PureComponent {
@@ -22,7 +22,7 @@ class AddBookComponent extends PureComponent {
         color="primary"
         size="small"
         onClick={() => this.props.addBook()}
-        startIcon={<AddIcon />}
+        startIcon={<LibraryAddIcon />}
       >
         Add Book
       </StyledButton>
