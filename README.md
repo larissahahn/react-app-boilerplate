@@ -32,3 +32,4 @@ NODE_ENV=development
 #### Create new Redux reducers for your actions in src/client/reducers directory. Make sure you include any additional reducer in your combineReducers in src/client/reducers.js file.
 #### Create new API endpoints on your proxy server in your routes files located in src/server/api/routes directory as well as include your routes at line 25 in src/server/index.js
 #### Setup Redux Router links for your app in src/routes.js file. You can configure which component to display per your link there.
+#### Change your app logo by adding your own svg to the toolbar or sidebar.
