@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   Toolbar, AppBar, IconButton, MenuItem, Menu
 } from '@material-ui/core';
@@ -15,6 +16,7 @@ import MessageIcon from '@material-ui/icons/Message';
 import PhonelinkSetupIcon from '@material-ui/icons/PhonelinkSetup';
 import ReactLogoComponent from './logo';
 import BooksButtonComponent from '../books/books-button';
+import { getUser } from '../../actions/user/userActions';
 
 const StyledToolbar = styled.div`
     flex-grow: 1;
@@ -91,20 +93,11 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-// Move to mock data from server userRoutes
-const sampleUser = {
-  auth: true, // mock signed in
-  username: 'larissahahn',
-  firstName: 'Larissa',
-  lastName: 'Hahn',
-  fullName: 'Larissa Hahn',
-  avatarImg: null
-};
-
 class ToolbarComponent extends PureComponent {
   constructor(props) {
     super(props);
     this.setAnchorEl = this.setAnchorEl.bind(this);
+    this.props.getUser();
 
     this.state = {
       anchorEl: null
@@ -116,7 +109,7 @@ class ToolbarComponent extends PureComponent {
   };
 
   render() {
-    const open = Boolean(this.state.anchorEl);
+    const { user } = this.props;
     const handleMenu = (event) => {
       this.setAnchorEl(event.currentTarget);
     };
@@ -136,23 +129,35 @@ class ToolbarComponent extends PureComponent {
             <HorizontalDivider />
             <UserAccountButtonMenu>
               <IconButton
-                aria-label={sampleUser.fullName}
+                aria-label={user.fullName}
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
                 onClick={handleMenu}
                 color="inherit"
                 size="medium"
-                style={{ paddingRight: '0em', paddingBottom: '.75em', backgroundColor: 'transparent' }}
+                style={{
+                  paddingRight: '0em',
+                  paddingBottom: '.75em',
+                  backgroundColor: 'transparent'
+                }}
               >
-                {sampleUser.auth ? (
-                  <Avatar alt={sampleUser.fullName} src="/images/avatar/1.png" style={{ width: '45px', height: '45px' }} />
-                ) : (<AccountCircle />)}
+                {user.auth ? (
+                  <Avatar
+                    alt={user.fullName}
+                    src={user.avatar}
+                    style={{
+                      width: '45px',
+                      height: '45px',
+                      border: '1px solid #F8F8F8'
+                    }}
+                  />
+                ) : (<AccountCircle style={{ paddingRight: '.5em' }} />)}
               </IconButton>
               <StyledMenu
                 id="menu-appbar"
                 anchorEl={this.state.anchorEl}
                 keepMounted
-                open={open}
+                open={Boolean(this.state.anchorEl)}
                 onClose={handleClose}
               >
                 <StyledMenuItem>
@@ -188,11 +193,18 @@ class ToolbarComponent extends PureComponent {
   }
 }
 
+ToolbarComponent.propTypes = {
+  getUser: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired
+};
+
 const mapStateToProps = (state) => ({
-  books: state.books
+  books: state.books,
+  user: state.user
 });
 
 const mapDispatchToProps = {
+  getUser
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToolbarComponent);

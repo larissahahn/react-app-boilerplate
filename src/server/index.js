@@ -9,6 +9,7 @@ const debug = require('debug');
 const http = require('http');
 const indexRoutes = require('./api/routes/indexRoutes');
 const booksRoutes = require('./api/routes/booksRoutes');
+const userRoutes = require('./api/routes/userRoutes');
 const app = express();
 const server = http.createServer(app);
 
@@ -23,6 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use('/', indexRoutes);
 app.use('/api/books', booksRoutes);
+app.use('/api/user', userRoutes);
 app.use(function (req, res, next) {
   next(createError(404));
 });
