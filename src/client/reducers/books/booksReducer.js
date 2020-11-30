@@ -1,4 +1,4 @@
-import { ADD_BOOK, GET_BOOKS_COUNT, GET_BOOKS } from '../actions/types';
+import { ADD_BOOK, GET_BOOKS_COUNT, GET_BOOKS } from '../../actions/types';
 
 export const booksReducer = (state = [], action) => {
   switch (action.type) {

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
 import AddIcon from '@material-ui/icons/Add';
-import { addBook } from '../../actions/books-action';
+import { addBook } from '../../actions/books/booksActions';
 
 const StyledButton = styled(Button)`
   background-color: blue;

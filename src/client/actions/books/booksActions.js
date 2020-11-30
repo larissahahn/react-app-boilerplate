@@ -1,4 +1,4 @@
-import { ADD_BOOK, GET_BOOKS_COUNT, GET_BOOKS } from './types';
+import { ADD_BOOK, GET_BOOKS_COUNT, GET_BOOKS } from '../types';
 
 export const addBook = (book) => ({
   type: ADD_BOOK

@@ -6,8 +6,8 @@ import AddBookComponent from './add-book';
 
 const StyledBooksLibrary = styled.div`
   display: grid;
-  grid-template-columns: 300px auto auto;
-  grid-template-rows: 300px auto;
+  grid-template-columns: 75% auto;
+  grid-template-rows: 25% auto;
   grid-col-gap: 1em;
   padding-top: 1.85em;
   padding-right: 40px;
@@ -21,7 +21,6 @@ class BooksListComponent extends PureComponent {
           <Typography variant="h3">Books</Typography>
           <Typography variant="body1">&nbsp;React Boilerplate App sample entity.</Typography>
         </div>
-        <div />
         <div>
           <AddBookComponent />
         </div>
