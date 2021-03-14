@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import '@progress/kendo-theme-default/dist/all.css'; // For use with KendoReact components
 import GlobalStyle from './globalStyles';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
@@ -32,7 +33,7 @@ const AppWithProvider = (
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <App />
+      <App className="app" />
     </ThemeProvider>
   </Provider>
 );

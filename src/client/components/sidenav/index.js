@@ -97,7 +97,7 @@ class SidenavComponent extends PureComponent {
                 move.style.paddingLeft = this.state.expanded ? `${260}px` : `${90}px`;
               });
           }}
-          style={{ background: '#FFFFFF', borderRight: '1px solid #ddd' }}
+          style={{ background: '#FFFFFF', borderRight: '1px solid #ddd', position: 'fixed' }}
         >
           <SideNav.Toggle style={{ background: '#3F51B5', maxHeight: '60px' }} />
           <NavHeader expanded={this.state.expanded} />
